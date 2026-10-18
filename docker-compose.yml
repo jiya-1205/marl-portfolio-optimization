@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  marl-app:
+    build: .
+    container_name: marl_trading_research
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
